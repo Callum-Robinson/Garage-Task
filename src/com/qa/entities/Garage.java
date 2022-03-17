@@ -27,11 +27,29 @@ public class Garage {
 		this.vehicles = vehicles;
 	}
 	
+	// print method to see garage contents
+	public void printVehicles() {
+		for (Vehicle vehicle : vehicles) {
+			System.out.println(vehicle);
+		}
+	}
+	
 	
 	public void addVehicle(Vehicle vehicle) {
 		vehicles.add(vehicle);
 	}
 	
+	public void removeVehicle (String colour, String type) {
+		for (int i = 0; i < vehicles.size(); i++) {
+			Vehicle current = vehicles.get(i);
+			if ((type == current.getType()) && (colour == current.getColour())) {
+				System.out.println(current.getColour() + " " + current.getType() + " has been removed");
+				vehicles.remove(i);
+				return;
+			}
+		}
+		System.out.println("No " + colour + " " + type + "s in garage");
+	}
 	
 	
 	

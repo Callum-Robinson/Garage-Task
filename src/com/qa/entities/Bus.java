@@ -4,12 +4,12 @@ public class Bus extends Vehicle {
 
 	public Bus() {
 		super();
-		this.setType("Bus");
+		this.setType("bus");
 	}
 
 	public Bus(int id, String colour, int noOfWheels) {
 		super(id, colour, noOfWheels);
-		this.setType("Bus");
+		this.setType("bus");
 	}
 
 	@Override

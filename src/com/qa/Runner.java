@@ -15,9 +15,19 @@ public class Runner {
 		System.out.println(car);
 		System.out.println(bike);
 		System.out.println(bus);
+		System.out.println();
 		
 		Garage garage = new Garage();
 		garage.addVehicle(car);
+		garage.addVehicle(bike);
+		garage.printVehicles();
+		
+		System.out.println();
+		garage.removeVehicle("blue", "motorbike");
+		garage.printVehicles();
+		
+		System.out.println();
+		garage.removeVehicle("blue", "car");
 		
 
 	}

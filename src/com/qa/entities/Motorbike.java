@@ -4,12 +4,12 @@ public class Motorbike extends Vehicle {
 
 	public Motorbike() {
 		super();
-		this.setType("Motorbike");
+		this.setType("motorbike");
 	}
 
 	public Motorbike(int id, String colour, int noOfWheels) {
 		super(id, colour, noOfWheels);
-		this.setType("Motorbike");
+		this.setType("motorbike");
 	}
 
 	@Override
