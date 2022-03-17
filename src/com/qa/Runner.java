@@ -46,6 +46,9 @@ public class Runner {
 		
 //		garage.removeAll();
 //		garage.printVehicles();
+		
+		System.out.println();
+		garage.repairCost("moderate");
 
 	}
 

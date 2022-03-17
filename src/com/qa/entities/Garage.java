@@ -81,5 +81,35 @@ public class Garage {
 	}
 	
 	
+	// repair cost calculator (using integers currently)
+	public int repairCost(String damage) {
+		switch(damage) {
+		case "non-existent":
+			System.out.println(damage + " repairs: " + "£45");
+			return 45;
+		
+		case "mild":
+			System.out.println(damage + " repairs: " + "£150");
+			return 150;
+			
+		case "moderate":
+			System.out.println(damage + " repairs: " + "£600");
+			return 600;
+			
+		case "severe":
+			System.out.println(damage + " repairs: " + "£1500");
+			return 1500;
+			
+		case "totalled":
+			System.out.println(damage + " repairs: " + "£3500");
+			return 3500;
+			
+		default:
+			System.out.println("How bad is the damage?");
+			return 0;
+		}
+	}
+	
+	
 	
 }
