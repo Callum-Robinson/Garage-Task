@@ -55,8 +55,12 @@ public class Vehicle {
 	public void setNoOfWheels(int noOfWheels) {
 		this.noOfWheels = noOfWheels;
 	}
-	
-	
+
+
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + ", colour=" + colour + ", noOfWheels=" + noOfWheels + "]";
+	}
 	
 	
 	
