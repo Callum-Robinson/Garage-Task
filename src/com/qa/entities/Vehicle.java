@@ -1,6 +1,6 @@
 package com.qa.entities;
 
-public class Vehicle {
+public abstract class Vehicle {
 	
 	private int id;
 	private String colour;
@@ -20,13 +20,9 @@ public class Vehicle {
 	}
 
 
-	public void honk() {
-		System.out.println("Vehicle honks");
-	}
+	public abstract void honk();
 	
-	public void move() {
-		System.out.println("Vehicle moves");
-	}
+	public abstract void move();
 	
 	
 	
