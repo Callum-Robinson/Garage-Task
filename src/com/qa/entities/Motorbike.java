@@ -1,5 +1,5 @@
 package com.qa.entities;
 
-public class Motorbike {
+public class Motorbike extends Vehicle {
 
 }
