@@ -76,4 +76,10 @@ public class Garage {
 	
 	
 	
+	public void removeAll( ) {
+		vehicles.clear();
+	}
+	
+	
+	
 }
