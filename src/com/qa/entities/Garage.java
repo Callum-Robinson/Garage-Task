@@ -28,6 +28,9 @@ public class Garage {
 	}
 	
 	
+	public void addVehicle(Vehicle vehicle) {
+		vehicles.add(vehicle);
+	}
 	
 	
 	
