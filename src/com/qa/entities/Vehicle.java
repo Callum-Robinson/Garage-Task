@@ -20,9 +20,13 @@ public class Vehicle {
 	}
 
 
+	public void honk() {
+		System.out.println("Vehicle honks");
+	}
 	
-	
-	
+	public void move() {
+		System.out.println("Vehicle moves");
+	}
 	
 	
 	
