@@ -4,6 +4,7 @@ public abstract class Vehicle {
 	
 	private int id;
 	private String colour;
+	private String type;
 	private int noOfWheels;
 	
 	
@@ -59,10 +60,23 @@ public abstract class Vehicle {
 	}
 
 
+	public String getType() {
+		return type;
+	}
+
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Vehicle [id=" + id + ", colour=" + colour + ", noOfWheels=" + noOfWheels + "]";
+		return "Vehicle [id=" + id + ", colour=" + colour + ", type=" + type + ", noOfWheels=" + noOfWheels + "]";
 	}
+
+
+	
 	
 	
 	

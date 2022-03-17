@@ -4,10 +4,12 @@ public class Car extends Vehicle {
 
 	public Car() {
 		super();
+		this.setType("Car");
 	}
 
 	public Car(int id, String colour, int noOfWheels) {
 		super(id, colour, noOfWheels);
+		this.setType("Car");
 	}
 
 	@Override
