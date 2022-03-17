@@ -52,5 +52,28 @@ public class Garage {
 	}
 	
 	
+	public void removeVehicleType (String type) {
+		int count = 0; //count vehicles removed
+		
+		for (int i = 0; i < vehicles.size();) {
+			Vehicle current = vehicles.get(i);
+			if (type == current.getType()) {
+				vehicles.remove(i);
+				count++;
+			}
+			else {
+				i++;
+			}
+		}
+		
+		if (count == 0) {
+			System.out.println("There are no " + type + "(s/es) in garage");
+		}
+		else {
+			System.out.println(count + " " + type + "/s removed");
+		}
+	}
+	
+	
 	
 }
