@@ -50,6 +50,9 @@ public class Runner {
 		System.out.println();
 		garage.repairCost("moderate");
 
+		System.out.println();
+		garage.repairVehicle(1, "moderate");
+		
 	}
 
 }

@@ -100,7 +100,7 @@ public class Garage {
 			System.out.println(damage + " repairs: " + "£1500");
 			return 1500;
 			
-		case "totalled":
+		case "extreme":
 			System.out.println(damage + " repairs: " + "£3500");
 			return 3500;
 			
@@ -110,9 +110,12 @@ public class Garage {
 		}
 	}
 
-
 	
-	
+	public void repairVehicle(int id, String damage) {
+		Vehicle current = vehicles.get(id - 1);
+		int cost = repairCost(damage);
+		System.out.println(current.getColour() + " " + current.getType() + " had " + damage + " damage repaired for £" + cost);
+	}
 	
 	
 	
