@@ -3,17 +3,19 @@ package com.qa.entities;
 import java.util.ArrayList;
 
 public class Garage {
+	// create fields for the Garage
 	private static int counter = 1;
 	private int id;
 	private String name;
 	private ArrayList<Vehicle> vehicles;
 	
-	
+	// empty constructor
 	public Garage() {
 		this.vehicles = new ArrayList<>();
 	}
 
 
+	// constructor with fields
 	public Garage(String name, ArrayList<Vehicle> vehicles) {
 		this.id = Garage.counter;
 		this.name = name;
@@ -21,6 +23,7 @@ public class Garage {
 	}
 
 
+	// constructor with manual id
 	public Garage(int id, String name, ArrayList<Vehicle> vehicles) {
 		this.id = id;
 		this.name = name;
@@ -35,10 +38,12 @@ public class Garage {
 	}
 	
 	
+	// add vehicle method
 	public void addVehicle(Vehicle vehicle) {
 		vehicles.add(vehicle);
 	}
 	
+	// remove a vehicle by colour and type
 	public void removeVehicle (String colour, String type) {
 		for (int i = 0; i < vehicles.size(); i++) {
 			Vehicle current = vehicles.get(i);
@@ -52,6 +57,7 @@ public class Garage {
 	}
 	
 	
+	// remove all vehicles of a certain type
 	public void removeVehicleType (String type) {
 		int count = 0; //count vehicles removed
 		
@@ -59,23 +65,23 @@ public class Garage {
 			Vehicle current = vehicles.get(i);
 			if (type == current.getType()) {
 				vehicles.remove(i);
-				count++;
+				count++; // counter so we can see how many vehicles were removed
 			}
-			else {
+			else { // added the i increment in the else statement due to the indexes decreasing when something is removed
 				i++;
 			}
 		}
 		
-		if (count == 0) {
+		if (count == 0) { // if no vehicles removed then say none of that type in garage
 			System.out.println("There are no " + type + "(s/es) in garage");
 		}
-		else {
+		else { // otherwise say how many of the type were removed
 			System.out.println(count + " " + type + "/s removed");
 		}
 	}
 	
 	
-	
+	// remove all method using clear
 	public void removeAll( ) {
 		vehicles.clear();
 	}
@@ -104,29 +110,30 @@ public class Garage {
 			System.out.println(damage + " repairs: " + "£3500");
 			return 3500;
 			
-		default:
+		default: // if damage doesn't match anything the following question is output
 			System.out.println("How bad is the damage?");
 			return 0;
 		}
 	}
 
 	
+	// repair vehicle method using vehicle id and damage sustained
 	public void repairVehicle(int id, String damage) {
-		if (id <= vehicles.size()) {
-		Vehicle current = vehicles.get(id - 1);
+		if (id <= vehicles.size()) { // check to make sure we dont exceed the arraylist size (avoids the error)
+		Vehicle current = vehicles.get(id - 1); // do id-1 so an id of 0 is not needed
 		
-		int cost = repairCost(damage);
-		if (cost > 0) {
+		int cost = repairCost(damage); // field for the cost that calls the repair cost method
+		if (cost != 0) { // if the cost is not 0 (therefore the default switch was not used)
 			System.out.println(current.getColour() + " " + current.getType() + " had " + damage + " damage repaired for £" + cost);
 		}
-		else {
+		else { // if default was used than damage was put in incorrectly so we add another message
 			System.out.println("We can't repair if we don't know");
 			return;
 		}
 		
 		}
 		
-		else {
+		else { // if ID exceeds the Arraylist size then output a message
 			System.out.println("Incorrect ID");
 			return;
 		}
@@ -134,7 +141,7 @@ public class Garage {
 	
 	
 	
-	
+	// auto getters and setters for fields
 	public int getId() {
 		return id;
 	}
