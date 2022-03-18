@@ -112,9 +112,24 @@ public class Garage {
 
 	
 	public void repairVehicle(int id, String damage) {
+		if (id <= vehicles.size()) {
 		Vehicle current = vehicles.get(id - 1);
+		
 		int cost = repairCost(damage);
-		System.out.println(current.getColour() + " " + current.getType() + " had " + damage + " damage repaired for £" + cost);
+		if (cost > 0) {
+			System.out.println(current.getColour() + " " + current.getType() + " had " + damage + " damage repaired for £" + cost);
+		}
+		else {
+			System.out.println("We can't repair if we don't know");
+			return;
+		}
+		
+		}
+		
+		else {
+			System.out.println("Incorrect ID");
+			return;
+		}
 	}
 	
 	
