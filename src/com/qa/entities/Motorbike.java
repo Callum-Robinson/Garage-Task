@@ -20,6 +20,15 @@ public class Motorbike extends Vehicle {
 		this.isRacingBike = isRacingBike;
 	}
 
+	// bike method
+	public void wheelie() {
+		System.out.println("Bike wheelies");
+	}
+	
+	public void stoppie() {
+		System.out.println("Bike stoppies");
+	}
+	
 	// honk override for bike
 	@Override
 	public void honk() {
