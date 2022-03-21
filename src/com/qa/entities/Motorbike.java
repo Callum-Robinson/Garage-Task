@@ -2,6 +2,7 @@ package com.qa.entities;
 
 public class Motorbike extends Vehicle {
 
+	// Motorbike fields
 	private boolean hasSidecar;
 	private boolean isRacingBike;
 	

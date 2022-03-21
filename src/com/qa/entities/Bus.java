@@ -2,6 +2,7 @@ package com.qa.entities;
 
 public class Bus extends Vehicle {
 
+	// Bus fields
 	private String company;
 	private boolean isBendy;
 	
