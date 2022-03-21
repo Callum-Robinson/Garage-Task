@@ -20,6 +20,11 @@ public class Bus extends Vehicle {
 		this.isBendy = isBendy;
 	}
 
+	// bus method
+	public void releaseAirBrake() {
+		System.out.println("All pedestrians deafened");
+	}
+	
 	// honk override for bus
 	@Override
 	public void honk() {
