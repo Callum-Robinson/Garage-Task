@@ -5,12 +5,14 @@ public class Car extends Vehicle {
 	// Car fields
 	private int noOfDoors;
 	private boolean isCustom;
+	private boolean isBootOpen;
 	
 	// all methods were added automatically with eclipse
 	// inherited empty constructor
 	public Car() {
 		super();
 		this.setType("car");
+		this.isBootOpen = false;
 	}
 
 	// inherited constructor with fields
@@ -19,6 +21,23 @@ public class Car extends Vehicle {
 		this.setType("car");
 		this.noOfDoors = noOfDoors;
 		this.isCustom = isCustom;
+		this.isBootOpen = false;
+	}
+	
+	// method for Car
+	public void openBoot() {
+		if ((noOfDoors % 2) == 1) { //if doors are odd the it has a boot (for this example)
+			if (isBootOpen == false) {
+				System.out.println("Boot opened");
+				isBootOpen = true;
+			}
+			else {
+				System.out.println("Boot is already open");
+			}
+		}
+		else {
+			System.out.println("There is no boot");
+		}
 	}
 
 	// honk override for car
