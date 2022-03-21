@@ -2,6 +2,9 @@ package com.qa.entities;
 
 public class Bus extends Vehicle {
 
+	private String company;
+	private boolean isBendy;
+	
 	// all methods were added automatically with eclipse
 	// inherited empty constructor
 	public Bus() {
@@ -10,9 +13,11 @@ public class Bus extends Vehicle {
 	}
 
 	// inherited constructor with fields
-	public Bus(int id, String colour, int noOfWheels) {
+	public Bus(int id, String colour, int noOfWheels, String company, boolean isBendy) {
 		super(id, colour, noOfWheels);
 		this.setType("bus");
+		this.company = company;
+		this.isBendy = isBendy;
 	}
 
 	// honk override for bus
@@ -27,5 +32,32 @@ public class Bus extends Vehicle {
 		System.out.println("Bus moves");
 	}
 
+	
+	// getters and setters
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public boolean isBendy() {
+		return isBendy;
+	}
+
+	public void setBendy(boolean isBendy) {
+		this.isBendy = isBendy;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Bus [Id=" + getId() + ", Colour=" + getColour() + ", NoOfWheels=" + getNoOfWheels()
+				+ ", Type=" + getType() + ", company=" + company + ", isBendy=" + isBendy + "]";
+	}
+
+	
+	
 	
 }

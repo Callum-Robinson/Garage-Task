@@ -14,7 +14,7 @@ public class Runner {
 		Car car3 = new Car(3, "black", 6, 6, false);
 		Motorbike bike = new Motorbike(4, "blue", 2, false, true);
 		Motorbike bike2 = new Motorbike(5, "black", 2, true, false);
-		Bus bus = new Bus(6, "purple", 4);
+		Bus bus = new Bus(6, "purple", 4, "First", false);
 		
 		// testing the vehicles print correctly
 //		System.out.println(car);
@@ -29,6 +29,7 @@ public class Runner {
 		garage.addVehicle(car3);
 		garage.addVehicle(bike);
 		garage.addVehicle(bike2);
+		garage.addVehicle(bus);
 		// call the print method to see the garage contents
 		garage.printVehicles();
 		
@@ -48,7 +49,7 @@ public class Runner {
 		
 		// test the remove all by type method for a type not present
 		System.out.println();
-		garage.removeVehicleType("bus");
+		garage.removeVehicleType("truck");
 		
 		// test for remove all method
 //		garage.removeAll();
