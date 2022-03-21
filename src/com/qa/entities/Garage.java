@@ -88,6 +88,7 @@ public class Garage {
 	
 	
 	// repair cost calculator (using integers currently)
+	// different from if doing the QA community challenge by basing off damage of one vehicle and not iterating through vehicles
 	public int repairCost(String damage) {
 		switch(damage) {
 		case "non-existent":
