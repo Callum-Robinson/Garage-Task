@@ -50,6 +50,7 @@ public class Motorbike extends Vehicle {
 		this.isRacingBike = isRacingBike;
 	}
 
+	// override toString for Motorbike fields
 	@Override
 	public String toString() {
 		return "Motorbike [Id=" + getId() + ", Colour=" + getColour() + ", NoOfWheels=" + getNoOfWheels()

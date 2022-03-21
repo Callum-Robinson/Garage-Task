@@ -51,7 +51,7 @@ public class Car extends Vehicle {
 		this.isCustom = isCustom;
 	}
 
-	// override toString to add the car fields
+	// override toString for the Car fields
 	@Override
 	public String toString() {
 		return "Car [Id=" + getId() + ", Colour=" + getColour() + ", NoOfWheels=" + getNoOfWheels()

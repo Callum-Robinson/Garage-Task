@@ -51,6 +51,7 @@ public class Bus extends Vehicle {
 	}
 
 	
+	// override toString for Bus fields
 	@Override
 	public String toString() {
 		return "Bus [Id=" + getId() + ", Colour=" + getColour() + ", NoOfWheels=" + getNoOfWheels()
