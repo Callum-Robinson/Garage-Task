@@ -1,34 +1,16 @@
 package com.qa.entities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Garage {
 	// create fields for the Garage
-	private static int counter = 1;
-	private int id;
-	private String name;
-	private ArrayList<Vehicle> vehicles;
+	private List<Vehicle> vehicles = new ArrayList<>();
 	
 	// empty constructor
 	public Garage() {
-		this.vehicles = new ArrayList<>();
 	}
 
-
-	// constructor with fields
-	public Garage(String name, ArrayList<Vehicle> vehicles) {
-		this.id = Garage.counter;
-		this.name = name;
-		this.vehicles = vehicles;
-	}
-
-
-	// constructor with manual id
-	public Garage(int id, String name, ArrayList<Vehicle> vehicles) {
-		this.id = id;
-		this.name = name;
-		this.vehicles = vehicles;
-	}
 	
 	// print method to see garage contents
 	public void printVehicles() {
@@ -140,26 +122,5 @@ public class Garage {
 		}
 	}
 	
-	
-	
-	// auto getters and setters for fields
-	public int getId() {
-		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-	public String getName() {
-		return name;
-	}
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
 }
+
