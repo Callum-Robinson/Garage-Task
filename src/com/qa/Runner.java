@@ -3,6 +3,7 @@ package com.qa;
 import com.qa.entities.Bus;
 import com.qa.entities.Car;
 import com.qa.entities.Garage;
+import com.qa.entities.Mechanic;
 import com.qa.entities.Motorbike;
 
 public class Runner {
@@ -55,13 +56,15 @@ public class Runner {
 //		garage.removeAll();
 //		garage.printVehicles();
 		
+		
+		Mechanic mechanic = new Mechanic(garage);
 		// test for repair cost method
 		System.out.println();
-		garage.repairCost("moderate");
+		mechanic.repairCost("moderate");
 
 		// test for repair vehicle method
 		System.out.println();
-		garage.repairVehicle(1, "moderate");
+		mechanic.repairVehicle(1, "moderate");
 		
 		
 	}
